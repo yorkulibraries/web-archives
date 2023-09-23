@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ _('Search Results') }}
+{% endblock %}
+
+{% block head %}
+{{ super() }}
+
+{% if "filter=" in env['QUERY_STRING'] or "matchType=" in env['QUERY_STRING'] %}
+
+<link rel="stylesheet" href="{{ static_prefix }}/css/query.css">
+<script src="{{ static_prefix }}/js/url-polyfill.min.js"></script>
+<script src="{{ static_prefix }}/query.js"></script>
+
+{% else %}
+
+<script src="{{ static_prefix }}/loading-spinner/loading-spinner.js"></script>
+<script src="{{ static_prefix }}/vue/vueui.js"></script>
+
+{% endif %}
+
+{% include 'vue_loc.html' %}
+
+{% endblock %}
+
+
+{% block body %}
+
+{% if "filter=" in env['QUERY_STRING'] or "matchType=" in env['QUERY_STRING'] %}
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <h4 class="display-4 text-center text-sm-left p-0">{{ _('Search Results') }}</h4>
+    </div>
+</div>
+<div class="container">
+    <div class="row justify-content-center text-center text-sm-left mt-1" id="display-query-type-info"></div>
+</div>
+<div class="container mt-3 q-display" id="captures"></div>
+<script>
+  var text = {
+      months: {
+       '01': "{{ _('January') }}",
+       '02': "{{ _('February') }}",
+       '03': "{{ _('March') }}",
+       '04': "{{ _('April') }}",
+       '05': "{{ _('May') }}",
+       '06': "{{ _('June') }}",
+       '07': "{{ _('July') }}",
+       '08': "{{ _('August') }}",
+       '09': "{{ _('September') }}",
+       '10': "{{ _('October') }}",
+       '11': "{{ _('November') }}",
+       '12': "{{ _('December') }}",
+      },
+      version: "{{ _('capture of') }}",
+      versions: "{{ _('captures of') }}",
+      result: "{{ _('result') }}",
+      results: "{{ _('results') }}",
+      matching: "{{ _('for matching') }}",
+      by: "{{ _('by') }}",
+      viewAllCaptures: "{{ _('View All Captures') }}",
+      dateTime: "{{ _('Date Time: ') }}",
+      mimeType: "{{ _('Mime Type: ') }}",
+      httpStatus: "{{ _('HTTP Status: ') }}",
+      types: {
+        'prefix': "{{ _('prefix') }}",
+        'host': "{{ _('host') }}",
+        'domain': "{{ _('domain') }}",
+      },
+      from: "{{ _('From') }}",
+      until: "{{ _('until') }}",
+      present: "{{ _('present') }}",
+      earliest: "{{ _('earliest') }}",
+    };
+
+  var filterMods = {
+    '=': "{{ _('Contains') }}",
+    '==': "{{ _('Matches Exactly') }}",
+    '=~': "{{ _('Matches Regex') }}",
+    '=!': "{{ _('Does Not Contain') }}",
+    '=!=': "{{ _('Is Not') }}",
+    '=!~': "{{ _('Does Not Begin With') }}"
+  };
+  var filteringBy = "{{ _('Filtering by') }}";
+  var forString = " {{ _('for') }} ";
+  var renderCal = new RenderCalendar({ prefix: "{{ prefix }}", staticPrefix: "{{ static_prefix }}", text: text });
+  renderCal.init();
+</script>
+
+{% else %}
+
+<div id="app" style="width: 100%; height: 100%"></div>
+
+<script>
+  VueUI.main("{{ static_prefix }}", "{{ url }}", "{{ prefix }}", undefined, "{{ ui.logo }}", "{{ ui.navbar_background_hex | default('f8f9fa') }}", "{{ ui.navbar_color_hex | default('212529') }}", "{{ ui.navbar_light_buttons }}", "{{ env.pywb_lang | default('en') }}",
+      allLocales, i18nStrings, "{{ ui.logo_home_url }}");
+</script>
+
+{% endif %}
+
+{% endblock %}

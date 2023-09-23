@@ -1,0 +1,86 @@
+/* ---------- Color Module Styles ----------- */
+
+/* YorkU Colors 2022-2023 
+ ** PRIMARY  
+ * #e31837  Red 
+ * #000     black
+ * #fff     white
+ ** SECONDARY 
+ * #af0d1a  Med Red 
+ * #810001  Dark Red
+ * #e1dfdc  light grey
+ * #D6CFCA; Pewter
+ * #B7AEA9; Med Grey 
+ * #686260  Dark Grey 
+ * #3AC2ED Bright blue
+ * #ACe6F8 Light Blue
+*/ 
+
+#page,
+#main-wrapper,
+.region-primary-menu .menu-item a.is-active,
+.region-primary-menu .menu-item--active-trail a {
+  background: #fff;
+}
+
+.tabs ul.primary li a.is-active {
+  background-color: #fff;
+}
+
+.tabs ul.primary li.is-active a {
+  background-color: #fff;
+  border-bottom-color: #fff;
+}
+
+
+#main {
+  padding-top: 10px;
+}
+
+.site-footer {
+  background: #E31837;
+  padding: 10px 0 0 0;
+  margin: 0;
+}
+
+.site-footer .content a {
+  color: #FFF;
+  font-family: yorkFont;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.extra_footer {
+  background-image: url('/themes/custom/york_drupal_theme/images/arrow.png');
+  background-position-x: 90%;
+  background-repeat: no-repeat;
+  font-size: small;
+}
+
+@media (max-width: 1400px) {
+  .extra_footer {
+    background-image: none;
+  }
+}
+
+.bg-primary {
+  background-color: #E31837 !important;
+}
+
+a,
+.link {
+  color: #E31837;
+}
+
+a:hover,
+a:focus,
+.link:hover,
+.link:focus {
+  color: #E31837;
+}
+
+a:active,
+.link:active {
+  color: #E31837;
+}
