@@ -1,20 +1,0 @@
---2023-09-21 22:50:33--  https://www.dropbox.com/scl/fi/0tjf3mk2k8o1uis4y6eb8/yfile.png?rlkey=oii39zbvmki9ome7ngzjnme9a
-Resolving www.dropbox.com (www.dropbox.com)... 162.125.11.18, 2620:100:6050:18::a27d:b12
-Connecting to www.dropbox.com (www.dropbox.com)|162.125.11.18|:443... connected.
-HTTP request sent, awaiting response... 302 Found
-Location: https://www.dropbox.com/e/scl/fi/0tjf3mk2k8o1uis4y6eb8/yfile.png?rlkey=oii39zbvmki9ome7ngzjnme9a [following]
---2023-09-21 22:50:33--  https://www.dropbox.com/e/scl/fi/0tjf3mk2k8o1uis4y6eb8/yfile.png?rlkey=oii39zbvmki9ome7ngzjnme9a
-Reusing existing connection to www.dropbox.com:443.
-HTTP request sent, awaiting response... 302 Found
-Location: https://uced4e7726360bb3e94de115418e.dl.dropboxusercontent.com/cd/0/inline/CEJe3_2YwTFpMCGnu1KZtEEnccjyQdq8te4_BJZNuQVGWWMDUMaGs9Oxa0Oehiotc_JFPsttqSur1OvNzMaukM-Ppb9gqxIs3r1AGtsZdFdFkHgQ090Ey430EadJOLmqz9k/file# [following]
---2023-09-21 22:50:34--  https://uced4e7726360bb3e94de115418e.dl.dropboxusercontent.com/cd/0/inline/CEJe3_2YwTFpMCGnu1KZtEEnccjyQdq8te4_BJZNuQVGWWMDUMaGs9Oxa0Oehiotc_JFPsttqSur1OvNzMaukM-Ppb9gqxIs3r1AGtsZdFdFkHgQ090Ey430EadJOLmqz9k/file
-Resolving uced4e7726360bb3e94de115418e.dl.dropboxusercontent.com (uced4e7726360bb3e94de115418e.dl.dropboxusercontent.com)... 162.125.11.15, 2620:100:6050:15::a27d:b0f
-Connecting to uced4e7726360bb3e94de115418e.dl.dropboxusercontent.com (uced4e7726360bb3e94de115418e.dl.dropboxusercontent.com)|162.125.11.15|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 454167 (444K) [image/png]
-Saving to: ‘yfile.png?rlkey=oii39zbvmki9ome7ngzjnme9a’
-
-yfile.png?rlkey=oii39zbvmki9ome7ngzjnme9a              0%[                                                                                                                      ]       0  --.-KB/s               yfile.png?rlkey=oii39zbvmki9ome7ngzjnme9a            100%[=====================================================================================================================>] 443.52K  --.-KB/s    in 0.008s  
-
-2023-09-21 22:50:34 (55.4 MB/s) - ‘yfile.png?rlkey=oii39zbvmki9ome7ngzjnme9a’ saved [454167/454167]
-
