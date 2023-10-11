@@ -1,11 +1,11 @@
-# YUL pywb
+# YUL (pywb) Wayback
 
 ## Usage
 
 ### Production
 
 * `docker run -it --rm -p 8080:8080 -v "/mnt/omega/web-archives:/webarchive" webrecorder/pywb:2.7.4`
-* https://omega.library.yorku.ca/
+* https://wayback.library.yorku.ca/
 
 ### Local (dev)
 
