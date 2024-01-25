@@ -1,5 +1,8 @@
 collections_root: collections
 
+collections:
+  all: $all
+
 # Per-Collection Paths
 archive_paths: archive
 index_paths: indexes
