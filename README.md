@@ -4,7 +4,7 @@
 
 ### Production
 
-* `docker run -it --rm -p 8080:8080 -v "/mnt/omega/web-archives:/webarchive" webrecorder/pywb:2.7.4`
+* `docker run -it --rm --network host -v "/mnt/omega/web-archives/:/webarchive" -v "/mnt/omega/web-archives/uwsgi.ini:/uwsgi/uwsgi.ini" webrecorder/pywb:2.8.3`
 * https://wayback.library.yorku.ca/
 
 ### Local (dev)
