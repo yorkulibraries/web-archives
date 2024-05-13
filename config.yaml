@@ -66,3 +66,4 @@ rules_config: pkg://pywb/rules.yaml
 
 ui:
   logo: yu-logo-header.png
+  logo_home_url: https://wayback.library.yorku.ca
